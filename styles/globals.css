@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tailwind Styles */
+.app {
+  @apply relative 
+    z-10 
+    flex 
+    flex-col;
+}
+
+/* Typhography */
+body {
+  @apply font-sans
+   font-normal
+   text-black-400
+   text-base
+   leading-relaxed
+   sm:leading-normal
+   sm:text-lg;
+}
+
+.body-sm {
+  @apply text-base leading-relaxed;
+}
+
+.container {
+  @apply px-6 grid
+    sm:px-10
+    md:grid-cols-12 
+    md:gap-x-[0.625rem] 
+    lg:gap-x-[1.875rem] 
+    lg:px-0;
+}
+
+.heading-xl {
+  @apply font-light 
+    text-2xl 
+    leading-tight
+    tracking-tight 
+    sm:text-4xl 
+    lg:text-7xl 
+    lg:leading-none;
+}
+
+.heading-lg {
+  @apply font-bold 
+    text-2xl 
+    leading-tight 
+    tracking-tight
+    sm:text-4xl 
+    sm:leading-none;
+}
+
+.heading-md {
+  @apply font-bold 
+    text-lg 
+    tracking-tight
+    leading-[1.5rem];
+}
+
+.heading-sm {
+  @apply font-semibold 
+    text-[1.0625rem] 
+    leading-7
+    tracking-wider 
+    uppercase;
+}
+
+/* Background */
+.bg-to-white {
+  @apply bg-gradient-to-r 
+    from-white 
+    from-50% 
+    to-transparent 
+    to-50%
+    bg-double;
+}
+
+.bg-to-black {
+  @apply bg-gradient-to-r 
+    from-black-400 
+    from-50% 
+    to-transparent 
+    to-50%
+    bg-double;
+}
+
+.bg-black-to-white {
+  @apply bg-gradient-to-r 
+    from-white 
+    from-50% 
+    to-black-400 
+    to-50%
+    bg-double;
+}
+
+/* Buttons */
+.btn {
+  @apply inline-block
+    outline-1
+    outline-white
+    outline
+    text-white 
+    hover:text-black-400
+    bg-to-white
+    bg-end
+    hover:bg-initial
+    font-semibold 
+    text-[1.0625rem] 
+    leading-4
+    tracking-wider 
+    uppercase
+    p-6
+    relative
+    disabled:cursor-not-allowed
+    transition-colors
+    duration-500;
+}
+
+.btn--dark {
+  @apply outline-black-400
+    text-black-400
+    hover:text-white
+    bg-to-black;
+}
+
+.btn--black {
+  @apply outline-black-400
+    hover:outline-white
+    text-white
+    hover:text-black-400
+    bg-black-to-white;
+}
+
+.btn--lg {
+  @apply px-14;
+}
+
+.btn:disabled {
+  @apply opacity-50 bg-none text-white outline-white;
+}
