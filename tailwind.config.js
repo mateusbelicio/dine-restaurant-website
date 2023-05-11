@@ -50,6 +50,9 @@ module.exports = {
         initial: '0%',
         end: '90%',
       },
+      boxShadow: {
+        default: '0px 75px 100px -50px rgba(56, 66, 85, 0.503223)',
+      },
       transitionProperty: {
         colors:
           'color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, background-position',

@@ -30,9 +30,9 @@ body {
 .container {
   @apply px-6 grid
     sm:px-10
-    md:grid-cols-12 
-    md:gap-x-[0.625rem] 
-    lg:gap-x-[1.875rem] 
+    sm:grid-cols-12 
+    sm:gap-x-[0.625rem] 
+    md:gap-x-[1.875rem] 
     lg:px-0;
 }
 
@@ -68,6 +68,16 @@ body {
     leading-7
     tracking-wider 
     uppercase;
+}
+
+.text-footer {
+  @apply uppercase
+    tracking-[2px]
+    text-sm
+    leading-7
+    font-normal
+    text-center
+    sm:text-left;
 }
 
 /* Background */
@@ -106,9 +116,11 @@ body {
     outline
     text-white 
     hover:text-black-400
+    focus-visible:text-black-400
     bg-to-white
     bg-end
     hover:bg-initial
+    focus-visible:bg-initial
     font-semibold 
     text-[1.0625rem] 
     leading-4
@@ -125,14 +137,17 @@ body {
   @apply outline-black-400
     text-black-400
     hover:text-white
+    focus-visible:text-white
     bg-to-black;
 }
 
 .btn--black {
   @apply outline-black-400
     hover:outline-white
+    focus-visible:outline-white
     text-white
     hover:text-black-400
+    focus-visible:text-black-400
     bg-black-to-white;
 }
 
