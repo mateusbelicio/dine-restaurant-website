@@ -7,7 +7,6 @@ import ImageOptimized from './ImageOptimized';
 
 export const Hero = () => {
   return (
-    // pt-56
     <section className='bg-black-400 mix-blend-normal pb-[9.5rem] md:pb-[12.375rem] md:pt-16 relative'>
       <ImageOptimized
         path='/homepage/hero-bg'
