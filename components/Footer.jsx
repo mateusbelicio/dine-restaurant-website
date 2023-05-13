@@ -2,7 +2,7 @@ import Logo from './Logo';
 
 export const Footer = () => {
   return (
-    <footer className='bg-black-400 text-white text-footer py-20 '>
+    <footer className='bg-black-400 text-white text-footer py-20 md:py-[4.875rem] '>
       <div className='container gap-y-8'>
         <div className='sm:col-span-2 mb-2'>
           <Logo />
