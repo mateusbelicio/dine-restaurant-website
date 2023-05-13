@@ -67,7 +67,8 @@ body {
     text-[1.0625rem] 
     leading-7
     tracking-wider 
-    uppercase;
+    uppercase
+    text-black-200;
 }
 
 .text-footer {
@@ -111,6 +112,7 @@ body {
 /* Buttons */
 .btn {
   @apply inline-block
+    whitespace-nowrap
     outline-1
     outline-white
     outline
@@ -143,8 +145,6 @@ body {
 
 .btn--black {
   @apply outline-black-400
-    hover:outline-white
-    focus-visible:outline-white
     text-white
     hover:text-black-400
     focus-visible:text-black-400
