@@ -1,5 +1,5 @@
 import { Hero } from '@components/Hero';
-import { Features } from '@components/Features';
+import { About } from '@components/About';
 import { Highlights } from '@components/Highlights';
 import { Events } from '@components/Events';
 import { CallToAction } from '@components/CallToAction';
@@ -8,7 +8,7 @@ export default () => {
   return (
     <>
       <Hero />
-      <Features />
+      <About />
       <Highlights />
       <Events />
       <CallToAction />
