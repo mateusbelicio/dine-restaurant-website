@@ -11,7 +11,7 @@ module.exports = {
       sans: ['League Spartan', 'sans-serif'],
     },
     fontSize: {
-      xs: '0.75rem',
+      xs: '0.625rem',
       sm: '0.875rem',
       base: '1rem',
       md: '1.125rem',
@@ -31,9 +31,11 @@ module.exports = {
         'secondary-300': 'hsl(217 14% 42%)',
         'secondary-400': 'hsl(218 21% 18%)',
         'secondary-500': 'hsl(234 30% 13%)',
+        'black-100': 'hsl(0 0% 56%)',
         'black-200': '#4C4C4C',
         'black-300': 'hsl(0 0% 9%)',
         'black-400': '#111111',
+        'accent-400': 'hsl(0 43% 50%)',
       },
       letterSpacing: {
         tightest: '-.15em',
@@ -63,6 +65,15 @@ module.exports = {
         screens: {
           lg: '69.375rem',
         },
+      },
+      keyframes: {
+        'grow-up': {
+          '0%': { transform: 'scaleX(0)' },
+          '100%': { transform: 'scaleX(1)' },
+        },
+      },
+      animation: {
+        grow: 'grow-up 300ms ease-out both',
       },
     },
   },

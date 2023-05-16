@@ -10,31 +10,43 @@ export const Highlights = () => {
           <h2 className='heading-lg'>
             A few highlights from <br /> our menu
           </h2>
-          <p className='max-w-[40ch]'>
+          <p className='max-w-[27.8125rem]'>
             We cater for all dietary requirements, but here’s a glimpse at some of our diner’s favourites. Our menu is revamped every season.
           </p>
         </div>
 
         <ul className='flex flex-col gap-y-6 text-center body-sm col-span-full sm:col-start-2 sm:col-end-12 sm:text-left md:col-start-7 md:col-end-13 md:mt-14'>
-          <li className='flex flex-col sm:flex-row gap-y-9 items-center pb-[3.375rem] sm:pb-6 border-b border-white border-opacity-[0.15] sm:gap-x-[1.875rem]'>
-            <ImageOptimized path='/homepage/salmon' type='jpg' className='flex-shrink-0' />
+          <li className='flex flex-col sm:flex-row gap-y-9 items-center pb-[3.375rem] sm:pb-6 border-b border-white border-opacity-[0.15] sm:gap-x-[3.875rem] '>
+            <ImageOptimized
+              path='/homepage/salmon'
+              type='jpg'
+              className='min-w-min relative sm:after:absolute sm:after:h-[1px] sm:after:w-8 sm:after:content-[""] sm:after:inline-block sm:after:top-[1.125rem] sm:after:left-full sm:after:bg-primary-400 '
+            />
             <div className='flex flex-col gap-y-1 flex-grow'>
               <h3 className='heading-md'>Seared Salmon Fillet</h3>
-              <p className='max-w-[35ch]'>Our locally sourced salmon served with a refreshing buckwheat summer salad.</p>
+              <p className='max-w-[35ch] sm:max-w-none'>Our locally sourced salmon served with a refreshing buckwheat summer salad.</p>
             </div>
           </li>
-          <li className='flex flex-col sm:flex-row gap-y-9 items-center pb-[3.375rem] sm:pb-6 border-b border-white border-opacity-[0.15] sm:gap-x-[1.875rem]'>
-            <ImageOptimized path='/homepage/beef' type='jpg' className='flex-shrink-0' />
+          <li className='flex flex-col sm:flex-row gap-y-9 items-center pb-[3.375rem] sm:pb-6 border-b border-white border-opacity-[0.15] sm:gap-x-[3.875rem] '>
+            <ImageOptimized
+              path='/homepage/beef'
+              type='jpg'
+              className='min-w-min relative sm:after:absolute sm:after:h-[1px] sm:after:w-8 sm:after:content-[""] sm:after:inline-block sm:after:top-[1.125rem] sm:after:left-full sm:after:bg-primary-400 '
+            />
             <div className='flex flex-col gap-y-1 flex-grow'>
               <h3 className='heading-md'>Rosemary Filet Mignon</h3>
-              <p className='max-w-[35ch]'>Our prime beef served to your taste with a delicious choice of seasonal sides.</p>
+              <p className='max-w-[35ch] sm:max-w-none'>Our prime beef served to your taste with a delicious choice of seasonal sides.</p>
             </div>
           </li>
-          <li className='flex flex-col sm:flex-row gap-y-9 items-center sm:gap-x-[1.875rem]'>
-            <ImageOptimized path='/homepage/chocolate' type='jpg' className='flex-shrink-0' />
+          <li className='flex flex-col sm:flex-row gap-y-9 items-center sm:gap-x-[3.875rem] '>
+            <ImageOptimized
+              path='/homepage/chocolate'
+              type='jpg'
+              className='min-w-min relative sm:after:absolute sm:after:h-[1px] sm:after:w-8 sm:after:content-[""] sm:after:inline-block sm:after:top-[1.125rem] sm:after:left-full sm:after:bg-primary-400 '
+            />
             <div className='flex flex-col gap-y-1 flex-grow'>
               <h3 className='heading-md'>Summer Fruit Chocolate Mousse</h3>
-              <p className='max-w-[35ch]'>Creamy mousse combined with summer fruits and dark chocolate shavings.</p>
+              <p className='max-w-[35ch] sm:max-w-none'>Creamy mousse combined with summer fruits and dark chocolate shavings.</p>
             </div>
           </li>
         </ul>
