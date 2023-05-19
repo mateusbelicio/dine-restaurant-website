@@ -20,12 +20,12 @@
 /* Typhography */
 body {
   @apply font-sans
-   font-normal
-   text-black-400
    text-base
+   font-normal
    leading-relaxed
-   sm:leading-normal
-   sm:text-lg;
+   text-black-400
+   sm:text-lg
+   sm:leading-normal;
 }
 
 .body-sm {
@@ -33,17 +33,17 @@ body {
 }
 
 .container {
-  @apply px-6 grid
-    sm:px-10
-    sm:grid-cols-12 
+  @apply grid px-6
+    sm:grid-cols-12
     sm:gap-x-[0.625rem] 
+    sm:px-10 
     md:gap-x-[1.875rem] 
     lg:px-0;
 }
 
 .heading-xl {
-  @apply font-light 
-    text-2xl 
+  @apply text-2xl 
+    font-light 
     leading-tight
     tracking-tight 
     sm:text-4xl 
@@ -52,8 +52,8 @@ body {
 }
 
 .heading-lg {
-  @apply font-bold 
-    text-2xl 
+  @apply text-2xl 
+    font-bold 
     leading-tight 
     tracking-tight
     sm:text-4xl 
@@ -61,28 +61,28 @@ body {
 }
 
 .heading-md {
-  @apply font-bold 
-    text-lg 
-    tracking-tight
-    leading-[1.5rem];
+  @apply text-lg 
+    font-bold 
+    leading-[1.5rem]
+    tracking-tight;
 }
 
 .heading-sm {
-  @apply font-semibold 
-    text-[1.0625rem] 
-    leading-7
-    tracking-wider 
+  @apply text-[1.0625rem] 
+    font-semibold 
     uppercase
+    leading-7 
+    tracking-wider
     text-black-200;
 }
 
 .text-footer {
-  @apply uppercase
-    tracking-[2px]
+  @apply text-center
     text-sm
-    leading-7
     font-normal
-    text-center
+    uppercase
+    leading-7
+    tracking-[2px]
     sm:text-left;
 }
 
@@ -116,44 +116,44 @@ body {
 
 /* Buttons */
 .btn {
-  @apply inline-block
-    whitespace-nowrap
-    outline-1
-    outline-white
-    outline
-    text-white 
-    hover:text-black-400
-    focus-visible:text-black-400
-    bg-to-white
-    bg-end
-    hover:bg-initial
-    focus-visible:bg-initial
-    font-semibold 
-    text-[1.0625rem] 
-    leading-4
-    tracking-wider 
-    uppercase
-    p-6
+  @apply bg-to-white
     relative
-    disabled:cursor-not-allowed
-    transition-colors
-    duration-500;
+    inline-block
+    whitespace-nowrap
+    bg-end
+    p-6 
+    text-[1.0625rem]
+    font-semibold
+    uppercase
+    leading-4
+    tracking-wider
+    text-white
+    outline 
+    outline-1 
+    outline-white
+    transition-colors 
+    duration-500
+    hover:bg-initial
+    hover:text-black-400
+    focus-visible:bg-initial
+    focus-visible:text-black-400
+    disabled:cursor-not-allowed;
 }
 
 .btn--dark {
-  @apply outline-black-400
+  @apply bg-to-black
     text-black-400
+    outline-black-400
     hover:text-white
-    focus-visible:text-white
-    bg-to-black;
+    focus-visible:text-white;
 }
 
 .btn--black {
-  @apply outline-black-400
+  @apply bg-black-to-white
     text-white
+    outline-black-400
     hover:text-black-400
-    focus-visible:text-black-400
-    bg-black-to-white;
+    focus-visible:text-black-400;
 }
 
 .btn--lg {
@@ -161,7 +161,7 @@ body {
 }
 
 .btn:disabled {
-  @apply opacity-50 bg-none text-white outline-white;
+  @apply bg-none text-white opacity-50 outline-white;
 }
 
 .tab-active {
@@ -169,24 +169,24 @@ body {
 }
 
 .tab-active::before {
-  @apply content-[''] 
-    animate-grow 
-    absolute 
-    w-12
-    md:w-24
-    h-[1px] 
-    bg-primary-400 
+  @apply absolute 
     inset-0 
-    top-auto
-    sm:-bottom-2
+    top-auto 
+    -z-10
     mx-auto
-    md:mx-0
+    h-[1px] 
+    w-12 
+    animate-grow 
+    bg-primary-400
+    content-['']
+    sm:-bottom-2
     md:inset-0
-    md:top-1/2
-    md:right-[calc(100%+2rem)]
     md:left-auto
-    md:origin-left
-    -z-10;
+    md:right-[calc(100%+2rem)]
+    md:top-1/2
+    md:mx-0
+    md:w-24
+    md:origin-left;
 }
 
 .pattern-curve-tr,
@@ -201,22 +201,22 @@ body {
 .pattern-curve-tr--after::after {
   @apply absolute 
     -z-10
-    sm:content-[url(/assets/patterns/pattern-curve-top-right.svg)] 
-    h-[20rem];
+    h-[20rem] 
+    sm:content-[url(/assets/patterns/pattern-curve-top-right.svg)];
 }
 
 .pattern-curve-tl::before {
   @apply absolute
     -z-10
-    sm:content-[url(/assets/patterns/pattern-curve-top-left.svg)]
-    h-[20rem];
+    h-[20rem]
+    sm:content-[url(/assets/patterns/pattern-curve-top-left.svg)];
 }
 
 .pattern-curve-br::before {
   @apply absolute
     -z-10
-    sm:content-[url(/assets/patterns/pattern-curve-bottom-right.svg)]
-    h-[20rem];
+    h-[20rem]
+    md:content-[url(/assets/patterns/pattern-curve-bottom-right.svg)];
 }
 
 .pattern-lines::before {

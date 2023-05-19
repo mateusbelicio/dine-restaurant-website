@@ -46,6 +46,12 @@ module.exports = {
         wider: '.025em',
         widest: '.05em',
       },
+      backgroundImage: {
+        'icon-arrow': "url('/assets/icons/icon-arrow.svg')",
+        'icon-minus': "url('/assets/icons/icon-minus.svg')",
+        'icon-plus': "url('/assets/icons/icon-plus.svg')",
+        'icon-check': "url('/assets/icons/icon-check.svg')",
+      },
       backgroundSize: {
         double: '250%',
       },
@@ -55,6 +61,7 @@ module.exports = {
       },
       boxShadow: {
         default: '0px 75px 100px -50px rgba(56, 66, 85, 0.503223)',
+        dropbox: '0px 15px 25px rgba(56, 66, 85, 0.24623)',
       },
       transitionProperty: {
         colors:
