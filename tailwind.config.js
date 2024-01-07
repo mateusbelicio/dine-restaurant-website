@@ -73,12 +73,6 @@ module.exports = {
         colors:
           'color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, background-position',
       },
-      container: {
-        center: true,
-        screens: {
-          lg: '69.375rem',
-        },
-      },
       keyframes: {
         'grow-up': {
           '0%': { transform: 'scaleX(0)' },

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // ======================================================================
 // INPUT TEXT
@@ -133,12 +133,39 @@ export const InputDate = ({ label, ...props }) => {
 // ======================================================================
 // INPUT TIME
 export const InputTime = ({ label, ...props }) => {
+  const [hour, setHour] = useState('');
+  const [minutes, setMinutes] = useState('');
   const [optionSelected, setOptionSelected] = useState('am');
   const [isOpenListBox, setIsOpenListBox] = useState(false);
 
-  const toggleListBoxState = () => {
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      if (event.key === 'Escape') {
+        setIsOpenListBox(false)
+        window.removeEventListener('keydown', handleKeyPress)
+      }
+    }
+
+    if(isOpenListBox) {
+      window.addEventListener('keydown', handleKeyPress)
+    } else {
+      window.removeEventListener('keydown', handleKeyPress)
+    }
+  }, [isOpenListBox])
+
+  const toggleListBoxState = () => { 
     setIsOpenListBox((prev) => !prev);
   };
+
+  const handleChangeHour = (event) => {
+    const value = event.target.value.replace(/\+|-/ig, '');
+    setHour(value)
+  }
+
+  const handleChangeMinutes = (event) => {
+    const value = event.target.value.replace(/\+|-/ig, '');
+    setMinutes(value)
+  }
 
   return (
     <fieldset className='flex flex-col items-start gap-x-4 gap-y-[0.625rem] sm:flex-row sm:items-center sm:justify-between'>
@@ -154,56 +181,74 @@ export const InputTime = ({ label, ...props }) => {
       <div className='flex gap-x-[0.625rem]'>
         <input
           className='w-[28%] border-b border-current px-4 pb-[0.875rem] text-black-100 caret-primary-400 outline-none invalid:text-accent-400 focus-visible:text-black-400 sm:w-20'
-          type='text'
+          type='number'
+          onChange={handleChangeHour}
+          inputMode='numeric'
+          value={hour}
+          min={6}
+          max={12}
           aria-label='hours'
           placeholder='09'
           aria-errormessage={`error-${props.id}`}
         />
         <input
           className='w-[28%] border-b border-current px-4 pb-[0.875rem] text-black-100 caret-primary-400 outline-none invalid:text-accent-400 focus-visible:text-black-400 sm:w-20'
-          type='text'
+          type='number'
+          onChange={handleChangeMinutes}
+          inputMode='numeric'
+          value={minutes}
+          min={0}
+          max={55}
+          step={5}
           aria-label='minutes'
           placeholder='00'
           aria-errormessage={`error-${props.id}`}
         />
-        <button
-          type='button'
-          className='relative w-[44%] border-b border-current bg-transparent bg-icon-arrow  bg-right bg-no-repeat px-4 pb-[0.875rem] uppercase text-black-100 outline-none invalid:text-accent-400 focus-visible:text-black-400 sm:w-24'
-          name='am-pm'
-          id='am-pm'
-          aria-haspopup='listbox'
-          onClick={toggleListBoxState}
-        >
-          {optionSelected}
-          <ul
-            role='listbox'
-            aria-expanded={isOpenListBox}
-            className='collapse absolute left-0 top-full z-50 mt-2 flex flex-col gap-y-4 bg-white pb-3 pl-4 pr-9 pt-[1.125rem] shadow-dropbox aria-expanded:visible aria-expanded:opacity-100'
+        <div className={`relative w-[44%] border-b border-current text-black-100 outline-none invalid:text-accent-400 sm:w-24 focus-within:text-black-400 ${isOpenListBox ? 'text-black-400' : ''}`}>
+          <button
+            type='button'
+            className='uppercase px-4 pb-[0.875rem] w-full text-left bg-transparent bg-icon-arrow  bg-right bg-no-repeat focus-visible:text-black-400 focus-visible:outline-none'
+            name='am-pm'
+            id='am-pm'
+            aria-haspopup='listbox'
+            onClick={toggleListBoxState}
           >
-            <li>
-              <button
-                role='option'
-                aria-selected={optionSelected === 'am'}
-                className='flex items-center gap-x-4 transition-colors before:h-4 before:w-3 before:bg-center before:bg-no-repeat before:content-[""] hover:text-black-400 focus-visible:text-black-400 focus-visible:outline-none aria-selected:before:bg-icon-check'
-                type='button'
-                onClick={() => setOptionSelected('am')}
-              >
-                AM
-              </button>
-            </li>
-            <li>
-              <button
-                role='option'
-                aria-selected={optionSelected === 'pm'}
-                className='flex items-center gap-x-4 transition-colors before:h-4 before:w-3 before:bg-center before:bg-no-repeat before:content-[""] hover:text-black-400 focus-visible:text-black-400 focus-visible:outline-none aria-selected:before:bg-icon-check'
-                type='button'
-                onClick={() => setOptionSelected('pm')}
-              >
-                PM
-              </button>
-            </li>
-          </ul>
-        </button>
+            {optionSelected}
+            
+          </button>
+          <ul
+              role='listbox'
+              aria-expanded={isOpenListBox}
+              className='collapse last:pb-1 absolute left-0 top-full z-50 mt-2 flex flex-col bg-white pt-[0.625rem] shadow-dropbox aria-expanded:visible aria-expanded:opacity-100'
+            >
+              <li>
+                <button
+                  role='option'
+                  aria-selected={optionSelected === 'am'}
+                  className='flex py-2 pl-4 pr-9 items-center text-black-100 gap-x-4 transition-colors before:h-4 before:w-3 before:bg-center before:bg-no-repeat before:content-[""] hover:text-black-400 hover:bg-neutral-100 focus-visible:bg-neutral-100 focus-visible:text-black-400 focus-visible:outline-none aria-selected:before:bg-icon-check'
+                  type='button'
+                  onClick={() => setOptionSelected('am')}
+                >
+                  AM
+                </button>
+              </li>
+              <li>
+                <button
+                  role='option'
+                  aria-selected={optionSelected === 'pm'}
+                  className='flex py-2 pl-4 pr-9 items-center text-black-100 gap-x-4 transition-colors before:h-4 before:w-3 before:bg-center before:bg-no-repeat before:content-[""] hover:text-black-400 hover:bg-neutral-100 focus-visible:bg-neutral-100 focus-visible:text-black-400 focus-visible:outline-none aria-selected:before:bg-icon-check'
+                  type='button'
+                  onClick={() => setOptionSelected('pm')}
+                  onBlur={(event) => {
+                    const firstOption = event.target.closest('ul').querySelector('li:first-child button')
+                    firstOption.focus()
+                  }}
+                >
+                  PM
+                </button>
+              </li>
+            </ul>
+        </div>
       </div>
     </fieldset>
   );

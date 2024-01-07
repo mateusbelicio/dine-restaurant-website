@@ -36,20 +36,20 @@ export const Events = () => {
   const [activeTab, setActiveTab] = useState(events[0]);
 
   return (
-    <section className='pt-20 pb-32 sm:py-[7.5rem] md:py-40 pattern-curve-tr sm:before:top-0 sm:before:right-[51%] md:before:right-[62%]'>
-      <div className='container text-center gap-y-7 sm:gap-y-12 md:gap-y-20 md:text-left md:grid-rows-[1fr_auto]'>
+    <section className="pattern-curve-tr pb-32 pt-20 sm:py-[7.5rem] sm:before:right-[51%] sm:before:top-0 md:py-40 md:before:right-[62%]">
+      <div className="main-container main-grid gap-y-7 text-center sm:gap-y-12 md:grid-rows-[1fr_auto] md:gap-y-20 md:text-left">
         <ImageOptimized
           path={activeTab.imagePath}
           type={'jpg'}
           alt={activeTab.imageAlt}
-          classImage='w-full h-full object-cover'
-          className='sm:col-start-2 sm:col-end-12 md:row-span-full md:col-span-6 mb-5 sm:mb-2 md:mb-0 shadow-default pattern-lines before:-top-[2.375rem] before:-left-10 before:z-10'
+          classImage="w-full h-full object-cover"
+          className="pattern-lines mb-5 shadow-default before:-left-10 before:-top-[2.375rem] before:z-10 sm:col-start-2 sm:col-end-12 sm:mb-2 md:col-span-6 md:row-span-full md:mb-0"
         ></ImageOptimized>
-        <div className='sm:col-span-full md:row-start-2 md:col-start-8 md:col-end-13 flex flex-col sm:flex-row md:flex-col md:mb-[3.875rem] sm:justify-between gap-y-4 sm:gap-x-2'>
+        <div className="flex flex-col gap-y-4 sm:col-span-full sm:flex-row sm:justify-between sm:gap-x-2 md:col-start-8 md:col-end-13 md:row-start-2 md:mb-[3.875rem] md:flex-col">
           {events.map((event) => (
             <button
               key={event.id}
-              className={`heading-sm md:text-left flex-grow hover:opacity-100 transition-colors duration-300 ${
+              className={`heading-sm flex-grow transition-colors duration-300 hover:opacity-100 md:text-left ${
                 !(activeTab.id === event.id) ? 'opacity-50' : 'tab-active'
               }`}
               onClick={() => setActiveTab(event)}
@@ -58,10 +58,10 @@ export const Events = () => {
             </button>
           ))}
         </div>
-        <div className='flex flex-col items-center md:items-start gap-y-3 sm:gap-y-5 md:row-start-1 sm:col-start-3 sm:col-end-11 md:col-start-8 md:col-end-13 md:self-end'>
-          <h2 className='heading-lg'>{activeTab.name}</h2>
-          <p className='mb-4 sm:mb-10'>{activeTab.description}</p>
-          <Button as={Link} href='/booking' variant='lg black'>
+        <div className="flex flex-col items-center gap-y-3 sm:col-start-3 sm:col-end-11 sm:gap-y-5 md:col-start-8 md:col-end-13 md:row-start-1 md:items-start md:self-end">
+          <h2 className="heading-lg">{activeTab.name}</h2>
+          <p className="mb-4 sm:mb-10">{activeTab.description}</p>
+          <Button as={Link} href="/booking" variant="lg black">
             Book a Table
           </Button>
         </div>

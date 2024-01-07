@@ -13,7 +13,7 @@ export const Hero = () => {
         className="block max-h-56 w-full overflow-hidden sm:max-h-96 md:absolute md:top-0 md:h-full md:max-h-none"
         classImage="mx-auto h-full object-cover object-center md:mr-0 md:object-right"
       />
-      <div className="container isolate justify-items-center text-white md:justify-items-start">
+      <div className="main-container main-grid isolate justify-items-center text-white md:justify-items-start">
         <div className="col-span-full mt-3 text-center sm:mt-0 md:col-span-6 md:text-left">
           <Logo />
           <h1 className="heading-xl mb-5 mt-9 md:mt-[9.5625rem]">
