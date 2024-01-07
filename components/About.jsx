@@ -1,5 +1,5 @@
 import ImageOptimized from './ImageOptimized';
-import Divider from './Divider';
+import Divider from './ui/Divider';
 
 export const About = () => {
   return (

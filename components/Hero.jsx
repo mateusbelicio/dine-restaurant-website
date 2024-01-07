@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Button from './Button';
+import Button from './ui/Button';
 import Logo from './Logo';
 import ImageOptimized from './ImageOptimized';
 
@@ -23,7 +23,7 @@ export const Hero = () => {
             Experience our seasonal menu in beautiful country surroundings. Eat the freshest produce
             from the comfort of our farmhouse.
           </p>
-          <Button as={Link} href="/booking" variant="lg">
+          <Button as={Link} href="/booking" size="large">
             Book a Table
           </Button>
         </div>

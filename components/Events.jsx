@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Button from './Button';
+import Button from './ui/Button';
 import Link from 'next/link';
 import ImageOptimized from './ImageOptimized';
 
@@ -61,7 +61,7 @@ export const Events = () => {
         <div className="flex flex-col items-center gap-y-3 sm:col-start-3 sm:col-end-11 sm:gap-y-5 md:col-start-8 md:col-end-13 md:row-start-1 md:items-start md:self-end">
           <h2 className="heading-lg">{activeTab.name}</h2>
           <p className="mb-4 sm:mb-10">{activeTab.description}</p>
-          <Button as={Link} href="/booking" variant="lg black">
+          <Button as={Link} href="/booking" variant="black" size="large">
             Book a Table
           </Button>
         </div>

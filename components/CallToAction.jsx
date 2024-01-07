@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Button from './Button';
+import Button from './ui/Button';
 import ImageOptimized from './ImageOptimized';
 
 export const CallToAction = () => {
@@ -14,7 +14,7 @@ export const CallToAction = () => {
         />
         <div className="isolate flex flex-col items-center gap-y-5 sm:col-span-full sm:gap-y-6 md:flex-row md:justify-between">
           <h2 className="heading-lg">Ready to make a reservation?</h2>
-          <Button as={Link} href="/booking" variant="lg">
+          <Button as={Link} href="/booking" size="large">
             Book a Table
           </Button>
         </div>

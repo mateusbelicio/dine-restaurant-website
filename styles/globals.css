@@ -54,41 +54,9 @@
   .text-footer {
     @apply text-center text-sm font-normal uppercase leading-7 tracking-[2px] sm:text-left;
   }
-
-  .bg-to-white {
-    @apply bg-gradient-to-r from-white from-50% to-transparent to-50% bg-double;
-  }
-
-  .bg-to-black {
-    @apply bg-gradient-to-r from-black-400 from-50% to-transparent to-50% bg-double;
-  }
-
-  .bg-black-to-white {
-    @apply bg-gradient-to-r from-white from-50% to-black-400 to-50% bg-double;
-  }
 }
 
 @layer components {
-  .btn {
-    @apply bg-to-white relative inline-block whitespace-nowrap bg-end p-6 text-[1.0625rem] font-semibold uppercase leading-4 tracking-wider text-white outline outline-1  outline-white transition-colors duration-500 hover:bg-initial hover:text-black-400 focus-visible:bg-initial focus-visible:text-black-400 disabled:cursor-not-allowed;
-  }
-
-  .btn--dark {
-    @apply bg-to-black text-black-400 outline-black-400 hover:text-white focus-visible:text-white;
-  }
-
-  .btn--black {
-    @apply bg-black-to-white text-white outline-black-400 hover:text-black-400 focus-visible:text-black-400;
-  }
-
-  .btn--lg {
-    @apply px-14;
-  }
-
-  .btn:disabled {
-    @apply bg-none text-white opacity-50 outline-white;
-  }
-
   .tab-active {
     @apply relative;
   }

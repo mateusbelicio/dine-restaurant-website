@@ -38,9 +38,9 @@ module.exports = {
         'secondary-400': 'hsl(218 21% 18%)',
         'secondary-500': 'hsl(234 30% 13%)',
         'black-100': 'hsl(0 0% 56%)',
-        'black-200': '#4C4C4C',
+        'black-200': 'hsl(0 0% 30%)',
         'black-300': 'hsl(0 0% 9%)',
-        'black-400': '#111111',
+        'black-400': 'hsl(0 0% 7%)',
         'accent-400': 'hsl(0 43% 50%)',
       },
       letterSpacing: {
