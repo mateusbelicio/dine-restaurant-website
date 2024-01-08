@@ -17,47 +17,33 @@ export const HighlightsSection = () => {
         </div>
 
         <ul className="body-sm col-span-full flex flex-col gap-y-6 text-center sm:col-start-2 sm:col-end-12 sm:text-left md:col-start-7 md:col-end-13 md:mt-14">
-          <li className="flex flex-col items-center gap-y-9 border-b border-white border-opacity-[0.15] pb-[3.375rem] sm:flex-row sm:gap-x-[3.875rem] sm:pb-6 ">
-            <ImageOptimized
-              path="/homepage/salmon"
-              type="jpg"
-              className='relative min-w-min sm:after:absolute sm:after:left-full sm:after:top-[1.125rem] sm:after:inline-block sm:after:h-[1px] sm:after:w-8 sm:after:bg-primary-400 sm:after:content-[""] '
-            />
-            <div className="flex flex-grow flex-col gap-y-1">
-              <h3 className="heading-md">Seared Salmon Fillet</h3>
-              <p className="max-w-[35ch] sm:max-w-none">
-                Our locally sourced salmon served with a refreshing buckwheat summer salad.
-              </p>
-            </div>
-          </li>
-          <li className="flex flex-col items-center gap-y-9 border-b border-white border-opacity-[0.15] pb-[3.375rem] sm:flex-row sm:gap-x-[3.875rem] sm:pb-6 ">
-            <ImageOptimized
-              path="/homepage/beef"
-              type="jpg"
-              className='relative min-w-min sm:after:absolute sm:after:left-full sm:after:top-[1.125rem] sm:after:inline-block sm:after:h-[1px] sm:after:w-8 sm:after:bg-primary-400 sm:after:content-[""] '
-            />
-            <div className="flex flex-grow flex-col gap-y-1">
-              <h3 className="heading-md">Rosemary Filet Mignon</h3>
-              <p className="max-w-[35ch] sm:max-w-none">
-                Our prime beef served to your taste with a delicious choice of seasonal sides.
-              </p>
-            </div>
-          </li>
-          <li className="flex flex-col items-center gap-y-9 sm:flex-row sm:gap-x-[3.875rem] ">
-            <ImageOptimized
-              path="/homepage/chocolate"
-              type="jpg"
-              className='relative min-w-min sm:after:absolute sm:after:left-full sm:after:top-[1.125rem] sm:after:inline-block sm:after:h-[1px] sm:after:w-8 sm:after:bg-primary-400 sm:after:content-[""] '
-            />
-            <div className="flex flex-grow flex-col gap-y-1">
-              <h3 className="heading-md">Summer Fruit Chocolate Mousse</h3>
-              <p className="max-w-[35ch] sm:max-w-none">
-                Creamy mousse combined with summer fruits and dark chocolate shavings.
-              </p>
-            </div>
-          </li>
+          <HighlightItem imagePath="/homepage/salmon" imageAlt="salmon" description="Our locally sourced salmon served with a refreshing buckwheat summer salad.">
+            Seared Salmon Fillet
+          </HighlightItem>
+          <HighlightItem imagePath="/homepage/beef" imageAlt="beef" description="Our prime beef served to your taste with a delicious choice of seasonal sides.">
+            Rosemary Filet Mignon
+          </HighlightItem>
+          <HighlightItem imagePath="/homepage/chocolate" imageAlt="chocolate" description="Creamy mousse combined with summer fruits and dark chocolate shavings.">
+            Summer Fruit Chocolate Mousse
+          </HighlightItem>
         </ul>
       </div>
     </section>
   );
 };
+
+const HighlightItem = ({ imagePath, imageAlt, description, children }) => {
+  return (
+    <li className="flex flex-col items-center gap-y-9 [&:not(:last-child)]:border-b [&:not(:last-child)]:border-white [&:not(:last-child)]:border-opacity-[0.15] [&:not(:last-child)]:pb-[3.375rem] sm:flex-row sm:gap-x-[3.875rem] [&:not(:last-child)]:sm:pb-6">
+      <ImageOptimized
+        path={imagePath}
+        alt={imageAlt}
+        type="jpg"
+        className="relative min-w-min sm:after:absolute sm:after:left-full sm:after:top-[1.125rem] sm:after:inline-block sm:after:h-[1px] sm:after:w-8 sm:after:bg-primary-400 sm:after:content-['']"
+      />
+      <div className="flex flex-grow flex-col gap-y-1">
+        <h3 className="heading-md">{children}</h3>
+        <p className="max-w-[35ch] sm:max-w-none">{description}</p>
+      </div>
+    </li>
+)}
