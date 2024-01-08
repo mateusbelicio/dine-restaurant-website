@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import Button from './ui/Button';
-import Logo from './Logo';
-import ImageOptimized from './ImageOptimized';
+import Button from '../ui/Button';
+import Logo from '../ui/Logo';
+import ImageOptimized from '../ImageOptimized';
 
-export const Hero = () => {
+export const HeroSection = () => {
   return (
     <section className="relative bg-black-400 pb-[9.5rem] mix-blend-normal md:pb-[12.375rem] md:pt-16">
       <ImageOptimized

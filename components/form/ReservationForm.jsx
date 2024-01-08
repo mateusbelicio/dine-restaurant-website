@@ -1,4 +1,4 @@
-import Button from './ui/Button';
+import Button from '../ui/Button';
 import { InputText, InputEmail, InputNumber, InputDate, InputTime } from './Inputs';
 
 const ReservationForm = ({ className }) => {

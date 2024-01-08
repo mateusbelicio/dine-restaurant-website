@@ -1,17 +1,17 @@
-import { Hero } from '@components/Hero';
-import { About } from '@components/About';
-import { Highlights } from '@components/Highlights';
-import { Events } from '@components/Events';
-import { CallToAction } from '@components/CallToAction';
+import { HeroSection } from '@components/layouts/Hero';
+import { AboutSection } from '@components/layouts/About';
+import { HighlightsSection } from '@components/layouts/Highlights';
+import { EventsSection } from '@components/layouts/Events';
+import { CallToActionSection } from '@components/layouts/CallToAction';
 
 export default () => {
   return (
     <>
-      <Hero />
-      <About />
-      <Highlights />
-      <Events />
-      <CallToAction />
+      <HeroSection />
+      <AboutSection />
+      <HighlightsSection />
+      <EventsSection />
+      <CallToActionSection />
     </>
   );
 };

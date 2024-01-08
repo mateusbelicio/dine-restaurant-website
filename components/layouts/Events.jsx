@@ -1,9 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import Button from './ui/Button';
+import Button from '../ui/Button';
 import Link from 'next/link';
-import ImageOptimized from './ImageOptimized';
+import ImageOptimized from '../ImageOptimized';
 
 const events = [
   {
@@ -32,7 +32,7 @@ const events = [
   },
 ];
 
-export const Events = () => {
+export const EventsSection = () => {
   const [activeTab, setActiveTab] = useState(events[0]);
 
   return (

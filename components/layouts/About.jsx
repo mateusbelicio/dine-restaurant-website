@@ -1,7 +1,7 @@
-import ImageOptimized from './ImageOptimized';
-import Divider from './ui/Divider';
+import ImageOptimized from '../ImageOptimized';
+import Divider from '../ui/Divider';
 
-export const About = () => {
+export const AboutSection = () => {
   return (
     <section className="pattern-curve-tl pattern-curve-tr--after pb-24 sm:before:bottom-0 sm:before:left-[50%] sm:after:right-1/2 sm:after:top-24 md:pb-0 md:before:left-auto md:before:right-0 md:after:left-0 md:after:right-auto md:after:top-[15.625rem]">
       <div className="main-container main-grid isolate -mt-[4.375rem] md:-mb-20">

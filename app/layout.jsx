@@ -1,6 +1,6 @@
 import '@styles/globals.css';
 
-import { Footer } from '@components/Footer';
+import { Footer } from '@components/layouts/Footer';
 
 import { League_Spartan as LeagueSpartan } from 'next/font/google';
 

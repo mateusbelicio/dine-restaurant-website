@@ -1,7 +1,7 @@
-import Divider from './ui/Divider';
-import ImageOptimized from './ImageOptimized';
+import Divider from '../ui/Divider';
+import ImageOptimized from '../ImageOptimized';
 
-export const Highlights = () => {
+export const HighlightsSection = () => {
   return (
     <section className="bg-black-400 pb-24 pt-[4.5rem] text-center text-white sm:py-24 md:pb-[7.5rem] md:pt-[12.5rem] md:text-left">
       <div className="main-container main-grid gap-y-[5.25rem] sm:gap-y-14">

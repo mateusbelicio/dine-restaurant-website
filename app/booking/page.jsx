@@ -1,5 +1,5 @@
-import { Reservation } from '@components/Reservation';
+import { ReservationSection } from '@components/layouts/Reservation';
 
 export default () => {
-  return <Reservation />;
+  return <ReservationSection />;
 };

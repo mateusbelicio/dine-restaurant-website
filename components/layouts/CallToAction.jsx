@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import Button from './ui/Button';
-import ImageOptimized from './ImageOptimized';
+import Button from '../ui/Button';
+import ImageOptimized from '../ImageOptimized';
 
-export const CallToAction = () => {
+export const CallToActionSection = () => {
   return (
     <section className="relative bg-secondary-400 pb-20 pt-[5.25rem] text-white sm:pb-16 sm:pt-[4.5rem] md:py-[5.5rem]">
       <div className="main-container main-grid text-center">

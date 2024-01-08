@@ -1,8 +1,8 @@
-import Logo from './Logo';
-import ImageOptimized from './ImageOptimized';
-import ReservationForm from './ReservationForm';
+import Logo from '../ui/Logo';
+import ImageOptimized from '../ImageOptimized';
+import ReservationForm from '../form/ReservationForm';
 
-export const Reservation = () => {
+export const ReservationSection = () => {
   return (
     <section className="pattern-curve-br relative pt-14 md:before:bottom-0">
       <ImageOptimized
