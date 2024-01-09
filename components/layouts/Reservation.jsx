@@ -8,7 +8,7 @@ export const ReservationSection = () => {
       <ImageOptimized
         path="/booking/hero-bg"
         type="jpg"
-        alt="ALT TODO"
+        alt="An open-faced tuna sandwich with lemon, toasted sesame seeds and other ingredients."
         classImage="w-full h-full object-cover object-top"
         className="absolute inset-0 bottom-auto z-0 h-full max-h-[37.5rem] w-full overflow-hidden"
       />

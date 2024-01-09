@@ -9,7 +9,7 @@ export const HeroSection = () => {
       <ImageOptimized
         path="/homepage/hero-bg"
         type="jpg"
-        alt="Hero image"
+        alt="A beautiful dish of pasta with shrimp."
         className="block max-h-56 w-full overflow-hidden sm:max-h-96 md:absolute md:top-0 md:h-full md:max-h-none"
         classImage="mx-auto h-full object-cover object-center md:mr-0 md:object-right"
       />

@@ -9,6 +9,7 @@ export const CallToActionSection = () => {
         <ImageOptimized
           path="/homepage/ready-bg"
           type="jpg"
+          alt="An open-faced tuna sandwich with lemon, toasted sesame seeds and other ingredients."
           className="absolute inset-0 z-0"
           classImage="h-full w-full object-cover"
         />
