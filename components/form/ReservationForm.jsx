@@ -1,3 +1,5 @@
+import { twMerge } from 'tailwind-merge';
+
 import Button from '../ui/Button';
 import { InputText, InputEmail, InputNumber, InputDate, InputTime } from './Inputs';
 
@@ -5,9 +7,7 @@ const ReservationForm = ({ className }) => {
   return (
     <form
       noValidate
-      className={
-        'flex flex-col gap-y-8 bg-white p-8 text-lg leading-7 sm:p-12 ' + (className || '')
-      }
+      className={twMerge('flex flex-col gap-y-8 bg-white p-8 text-lg leading-7 sm:p-12', className)}
     >
       <InputText id="in-name" label="Name" placeholder="Name" />
       <InputEmail id="in-email" label="Email" placeholder="Email" />

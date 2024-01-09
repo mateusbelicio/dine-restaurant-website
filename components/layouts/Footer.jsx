@@ -8,8 +8,11 @@ export const Footer = () => {
           <Logo />
         </div>
         <address className="not-italic sm:col-start-5 sm:col-end-13 md:col-start-4 md:col-end-8">
-          Marthwaite, Sedbergh <br /> Cumbria
-          <a href="tel:+00441234567" className="block hover:underline focus-visible:underline">
+          Marthwaite, Sedbergh <br /> Cumbria <br />
+          <a
+            href="tel:+00441234567"
+            className="inline-block hover:underline focus-visible:underline focus-visible:outline-none focus-visible:outline-primary-400"
+          >
             +00 44 123 4567
           </a>
         </address>

@@ -33,15 +33,23 @@ module.exports = {
     },
     extend: {
       colors: {
-        'primary-400': 'hsl(27 22% 51%)',
-        'secondary-300': 'hsl(217 14% 42%)',
-        'secondary-400': 'hsl(218 21% 18%)',
-        'secondary-500': 'hsl(234 30% 13%)',
-        'black-100': 'hsl(0 0% 56%)',
-        'black-200': 'hsl(0 0% 30%)',
-        'black-300': 'hsl(0 0% 9%)',
-        'black-400': 'hsl(0 0% 7%)',
-        'accent-400': 'hsl(0 43% 50%)',
+        primary: {
+          400: 'hsl(27 22% 51%)',
+        },
+        secondary: {
+          300: 'hsl(217 14% 42%)',
+          400: 'hsl(218 21% 18%)',
+          500: 'hsl(234 30% 13%)',
+        },
+        black: {
+          100: 'hsl(0 0% 56%)',
+          200: 'hsl(0 0% 30%)',
+          300: 'hsl(0 0% 9%)',
+          400: 'hsl(0 0% 7%)',
+        },
+        accent: {
+          400: 'hsl(0 43% 50%)',
+        },
       },
       letterSpacing: {
         tightest: '-.15em',

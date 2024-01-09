@@ -32,7 +32,7 @@ export const AboutSection = () => {
 
 const AboutItem = ({ imagePath, imageAlt, children, description, className }) => {
   return (
-    <li className="group col-span-full grid grid-cols-[inherit] items-center justify-items-center gap-x-[inherit] gap-y-12">
+    <li className="group col-span-full grid grid-cols-[inherit] items-center justify-items-center gap-x-[inherit] gap-y-12 text-secondary-400">
       <ImageOptimized
         path={imagePath}
         type="jpg"

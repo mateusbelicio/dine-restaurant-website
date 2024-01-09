@@ -48,7 +48,7 @@
   }
 
   .heading-sm {
-    @apply text-[1.0625rem] font-semibold uppercase leading-7 tracking-wider text-black-200;
+    @apply text-[1.0625rem] font-semibold uppercase leading-7 tracking-wider;
   }
 
   .text-footer {
