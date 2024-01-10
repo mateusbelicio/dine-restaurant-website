@@ -10,7 +10,7 @@ export const InputText = ({ label, ...props }) => {
   return (
     <div className="flex flex-col gap-y-[0.625rem]">
       <input
-        className="border-b border-current px-4 pb-[0.875rem] text-black-100 caret-primary-400 invalid:text-accent-400 focus-visible:text-black-400 focus-visible:outline-none focus-visible:outline-primary-400"
+        className="border-b border-current px-4 pb-[0.875rem] text-black-100 caret-primary-400 invalid:text-accent-400 focus-visible:text-black-400 focus-visible:outline-none"
         type="text"
         {...props}
         aria-label={label}
@@ -32,7 +32,7 @@ export const InputEmail = ({ label, ...props }) => {
   return (
     <div className="flex flex-col gap-y-[0.625rem]">
       <input
-        className="border-b border-current px-4 pb-[0.875rem] text-black-100 caret-primary-400 invalid:text-accent-400 focus-visible:text-black-400 focus-visible:outline-none focus-visible:outline-primary-400"
+        className="border-b border-current px-4 pb-[0.875rem] text-black-100 caret-primary-400 invalid:text-accent-400 focus-visible:text-black-400 focus-visible:outline-none"
         type="email"
         {...props}
         aria-label={label}
@@ -108,21 +108,21 @@ export const InputDate = ({ label, ...props }) => {
       </div>
       <div className="flex gap-x-[0.625rem]">
         <input
-          className="w-[28%] border-b border-current px-4 pb-[0.875rem] text-black-100 caret-primary-400 invalid:text-accent-400 focus-visible:text-black-400 focus-visible:outline-none focus-visible:outline-primary-400 sm:w-20"
+          className="w-[28%] border-b border-current px-4 pb-[0.875rem] text-black-100 caret-primary-400 invalid:text-accent-400 focus-visible:text-black-400 focus-visible:outline-none sm:w-20"
           type="text"
           aria-label="month"
           placeholder="MM"
           aria-errormessage={`error-${props.id}`}
         />
         <input
-          className="w-[28%] border-b border-current px-4 pb-[0.875rem] text-black-100 caret-primary-400 invalid:text-accent-400 focus-visible:text-black-400 focus-visible:outline-none focus-visible:outline-primary-400 sm:w-20"
+          className="w-[28%] border-b border-current px-4 pb-[0.875rem] text-black-100 caret-primary-400 invalid:text-accent-400 focus-visible:text-black-400 focus-visible:outline-none sm:w-20"
           type="text"
           aria-label="day"
           placeholder="DD"
           aria-errormessage={`error-${props.id}`}
         />
         <input
-          className="w-[44%] border-b border-current px-4 pb-[0.875rem] text-black-100 caret-primary-400 invalid:text-accent-400 focus-visible:text-black-400 focus-visible:outline-none focus-visible:outline-primary-400 sm:w-24"
+          className="w-[44%] border-b border-current px-4 pb-[0.875rem] text-black-100 caret-primary-400 invalid:text-accent-400 focus-visible:text-black-400 focus-visible:outline-none sm:w-24"
           type="text"
           aria-label="year"
           placeholder="YYYY"
@@ -183,7 +183,7 @@ export const InputTime = ({ label, ...props }) => {
       </div>
       <div className="flex gap-x-[0.625rem]">
         <input
-          className="w-[28%] border-b border-current px-4 pb-[0.875rem] text-black-100 caret-primary-400 invalid:text-accent-400 focus-visible:text-black-400 focus-visible:outline-none focus-visible:outline-primary-400 sm:w-20"
+          className="w-[28%] border-b border-current px-4 pb-[0.875rem] text-black-100 caret-primary-400 invalid:text-accent-400 focus-visible:text-black-400 focus-visible:outline-none sm:w-20"
           type="number"
           onChange={handleChangeHour}
           inputMode="numeric"
@@ -195,7 +195,7 @@ export const InputTime = ({ label, ...props }) => {
           aria-errormessage={`error-${props.id}`}
         />
         <input
-          className="w-[28%] border-b border-current px-4 pb-[0.875rem] text-black-100 caret-primary-400 invalid:text-accent-400 focus-visible:text-black-400 focus-visible:outline-none focus-visible:outline-primary-400 sm:w-20"
+          className="w-[28%] border-b border-current px-4 pb-[0.875rem] text-black-100 caret-primary-400 invalid:text-accent-400 focus-visible:text-black-400 focus-visible:outline-none sm:w-20"
           type="number"
           onChange={handleChangeMinutes}
           inputMode="numeric"
@@ -214,7 +214,7 @@ export const InputTime = ({ label, ...props }) => {
         >
           <button
             type="button"
-            className="w-full bg-transparent bg-icon-arrow bg-right bg-no-repeat px-4 pb-[0.875rem]  text-left uppercase focus-visible:text-black-400 focus-visible:outline-none focus-visible:outline-primary-400"
+            className="w-full bg-transparent bg-icon-arrow bg-right bg-no-repeat px-4 pb-[0.875rem]  text-left uppercase focus-visible:text-black-400 focus-visible:outline-none"
             name="am-pm"
             id="am-pm"
             aria-haspopup="listbox"

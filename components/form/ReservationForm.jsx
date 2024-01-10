@@ -7,18 +7,16 @@ const ReservationForm = ({ className }) => {
   return (
     <form
       noValidate
-      className={twMerge('flex flex-col gap-y-8 bg-white p-8 text-lg leading-7 sm:p-12', className)}
+      className={twMerge(
+        'lg:pattern-lines flex flex-col gap-y-8 bg-white p-8 text-lg leading-7 before:bottom-0 before:left-0 before:-z-10 before:-translate-x-1/2 before:translate-y-1/2 sm:p-12',
+        className
+      )}
     >
       <InputText id="in-name" label="Name" placeholder="Name" />
       <InputEmail id="in-email" label="Email" placeholder="Email" />
 
       <InputDate id="in-date" label="Pick a date" />
       <InputTime id="in-time" label="Pick a time" />
-
-      {/* <label htmlFor='in-date'>Pick a date</label>
-      <input type='date' className='appearance-none' name='' id='in-date' /> */}
-      {/* <label htmlFor='in-time'>Pick a date</label>
-      <input type='time' name='' id='in-time' /> */}
 
       <InputNumber id="in-number" label="Number of people" />
       <Button type="submit" variant="black">
